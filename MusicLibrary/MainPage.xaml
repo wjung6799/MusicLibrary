@@ -11,25 +11,28 @@
     <Grid>
         <GridView Name="Employees" ItemsSource="{Binding}" 
                   Height="500" Width="1000" 
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.VerticalScrollBarVisibility="Visible">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Music">
                     <StackPanel Orientation="Vertical" Margin="2">
-                        <Image Width="150" Height="120" Source="{x:Bind CoverPhotoURI}"/>
+                        <Image Height="120" Width="150" Source="{x:Bind CoverPhotoURI}"/>
                         <TextBlock Text="{x:Bind Name}" Width="100" />
-                            <TextBlock Text="{x:Bind Title}" Width="100" />
-                        <!--Image>
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="200" UriSource="{x:Bind CoverPhotoURI}"/>
-                            </Image.Source>
-                        </ -->
-                        <HyperlinkButton NavigateUri="{x:Bind YoutubeURI}">Play</HyperlinkButton>
+                        <TextBlock Text="{x:Bind Title}" Width="100" />
+                        <TextBlock Text="{x:Bind YoutubeURI}"/>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
         <GridView>
+            <Button Content="Play" Click="Play_Button_Click" Height="49" />
+        </GridView>
+        <GridView Margin="0,56,0,-56">
             <Button Content="Add a Song" Click="Button_Click" />
         </GridView>
+        <MediaPlayerElement x:Name="mediaPlayer"
+                    Width="400"
+                    AutoPlay="False"
+                    AreTransportControlsEnabled="True"/>
     </Grid>
+    
 </Page>

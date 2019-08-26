@@ -14,6 +14,7 @@ C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\bin\x86\Debug\MyToolkit.dl
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\bin\x86\Debug\MyToolkit.Extended.dll
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\bin\x86\Debug\System.Runtime.dll
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\obj\x86\Debug\MusicLibrary.csprojAssemblyReference.cache
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\obj\x86\Debug\App.g.i.cs
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\obj\x86\Debug\App.g.cs
 C:\Users\wjung\source\repos\MusicLibrary\MusicLibrary\obj\x86\Debug\AddMusicPage.g.i.cs

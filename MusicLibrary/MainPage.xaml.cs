@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -47,6 +48,30 @@ namespace MusicLibrary
             this.Frame.Navigate(typeof(AddMusicPage));
         }
 
+        private async void Play_Button_Click(object sender, RoutedEventArgs e)
+        {
+            await SetLocalMedia();
+        }
+
+        async private System.Threading.Tasks.Task SetLocalMedia()
+        {
+            var openPicker = new Windows.Storage.Pickers.FileOpenPicker();
+
+            openPicker.FileTypeFilter.Add(".wmv");
+            openPicker.FileTypeFilter.Add(".mp4");
+            openPicker.FileTypeFilter.Add(".wma");
+            openPicker.FileTypeFilter.Add(".mp3");
+
+            var file = await openPicker.PickSingleFileAsync();
+
+            // mediaPlayer is a MediaPlayerElement defined in XAML
+            if (file != null)
+            {
+                mediaPlayer.Source = MediaSource.CreateFromStorageFile(file);
+
+                mediaPlayer.MediaPlayer.Play();
+            }
+        }
         /*
         private void (object sender, RoutedEventArgs e)
         {

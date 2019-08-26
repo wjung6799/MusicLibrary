@@ -11,26 +11,29 @@
     <Grid>
         <GridView x:ConnectionId='2' Name="Employees" ItemsSource="{Binding}" 
                   Height="500" Width="1000" 
-                  ScrollViewer.VerticalScrollBarVisibility="Auto">
+                  ScrollViewer.VerticalScrollBarVisibility="Visible">
             <GridView.ItemTemplate>
                 <DataTemplate                         >
-                    <StackPanel x:ConnectionId='5' Orientation="Vertical" Margin="2">
-                        <Image x:ConnectionId='6' Width="150" Height="120"                                />
-                        <TextBlock x:ConnectionId='7'                      Width="100" />
-                            <TextBlock x:ConnectionId='8'                       Width="100" />
-                        <!--Image>
-                            <Image.Source>
-                                <BitmapImage DecodePixelWidth="200" UriSource="{x:Bind CoverPhotoURI}"/>
-                            </Image.Source>
-                        </ -->
-                        <HyperlinkButton x:ConnectionId='9'                                  >Play</HyperlinkButton>
+                    <StackPanel x:ConnectionId='7' Orientation="Vertical" Margin="2">
+                        <Image x:ConnectionId='8' Height="120" Width="150"                                />
+                        <TextBlock x:ConnectionId='9'                      Width="100" />
+                        <TextBlock x:ConnectionId='10'                       Width="100" />
+                        <TextBlock x:ConnectionId='11'                           />
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
         <GridView>
-            <Button x:ConnectionId='3' Content="Add a Song"                      />
+            <Button x:ConnectionId='5' Content="Play"                           Height="49" />
         </GridView>
+        <GridView Margin="0,56,0,-56">
+            <Button x:ConnectionId='4' Content="Add a Song"                      />
+        </GridView>
+        <MediaPlayerElement x:ConnectionId='3' x:Name="mediaPlayer"
+                    Width="400"
+                    AutoPlay="False"
+                    AreTransportControlsEnabled="True"/>
     </Grid>
+    
 </Page>
 

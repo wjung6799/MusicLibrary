@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel Orientation="Vertical" Margin="150, 150, 0, 0" >
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Name: " Width="100" Height="50"/>
+                <TextBlock Text="Artist: " Width="100" Height="50"/>
                 <TextBox x:ConnectionId='7' Name="musicName" Height="35" Width="100" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -23,7 +23,7 @@
                 <TextBox x:ConnectionId='5' Name="coverPhotoUri" Height="35" Width="100" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Youtube URL: " Width="100" Height="50"/>
+                <TextBlock Text="File Location: " Width="100" Height="50"/>
                 <TextBox x:ConnectionId='4' Name="youtubeUri" Height="35" Width="100" />
             </StackPanel>
             <Button x:ConnectionId='2' Content="Save"                      />
